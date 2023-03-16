@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<header>
+			<h1 id="intro"></h1>
+			<h2>Make your Data</h2>
+		</header>
+		<div class="input-container grid-container">
+			<input type="text" name="name" placeholder="Nama" id="name" />
+			<input type="text" name="age" placeholder="Umur" id="age" />
+			<input type="text" name="email" placeholder="Email" id="email" />
+			<input type="submit" value="Tambah Data" onclick="addData()" />
+		</div>
+		<table id="data-table" border="1px solid black"></table>
+		<script src="index.js" async defer></script>
+	</body>
+</html>
