@@ -1,9 +1,9 @@
 function displayUser() {
-	try {
-		const userEmail = sessionStorage.getItem("Name");
+	const userEmail = sessionStorage.getItem("Name");
+	if (userEmail != null) {
 		const name = userEmail.split("@")[0];
 		document.getElementById("intro").innerHTML = `Hello ${name}`;
-	} catch {
+	} else {
 		window.location.href = "../login";
 	}
 }
