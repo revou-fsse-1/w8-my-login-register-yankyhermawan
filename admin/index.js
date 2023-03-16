@@ -9,7 +9,7 @@ function displayUser() {
 }
 
 function defaultData() {
-	const data = localStorage.getItem("Data Admin");
+	const data = JSON.parse(localStorage.getItem("Data Admin"));
 	const setData = [
 		{
 			name: "John",
