@@ -21,14 +21,13 @@
 	<body>
 		<section>
 			<div class="main-container">
-				<form class="form-container grid-container" action="../login">
+				<form class="form-container grid-container" action = "../login/index.html">
 					<span class="form-text">Sign Up</span>
 					<input
 						type="text"
 						class="input-form"
 						id="email"
 						placeholder="Email"
-						oninput="checkCredential(this.id)"
 						required
 					/>
 					<div id="email-text"></div>
@@ -37,7 +36,6 @@
 						class="input-form"
 						id="password"
 						placeholder="Password"
-						oninput="checkCredential(this.id)"
 						required
 					/>
 					<div id="password-text">
@@ -50,7 +48,6 @@
 						class="input-form"
 						id="password-confirm"
 						placeholder="Confirm Password"
-						oninput="confirmPassword()"
 						required
 					/>
 					<div id="password-text">
@@ -58,14 +55,13 @@
 					</div>
 					<div class="register-container">
 						<span class="register-text"
-							>Sudah Punya Akun? <a href="../login">Login</a></span
+							>Sudah Punya Akun? <a href="../login/index.html">Login</a></span
 						>
 					</div>
 					<input
 						type="submit"
 						id="btn"
 						value="Sign Up"
-						onclick="setAction()"
 						disabled="true"
 					/>
 				</form>

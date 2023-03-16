@@ -1,3 +1,14 @@
+document
+	.querySelector("#email")
+	.addEventListener("input", () => checkCredential("email"));
+
+document
+	.querySelector("#password")
+	.addEventListener("input", () => checkCredential("password"));
+
+document.querySelector("#btn").addEventListener("click", () => setAction()),
+	() => setAction();
+
 function defaultFunction() {
 	const dataLogin = localStorage.getItem("Data");
 	const setData = [{ email: "admin@gmail.com", password: "Admin123" }];

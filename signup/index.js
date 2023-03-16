@@ -1,5 +1,17 @@
-const emailInput = document.querySelector("#email");
-emailInput.addEventListener("input", checkCredential());
+document
+	.querySelector("#email")
+	.addEventListener("input", () => checkCredential("email"));
+
+document
+	.querySelector("#password")
+	.addEventListener("input", () => checkCredential("password"));
+
+document
+	.querySelector("#password-confirm")
+	.addEventListener("input", () => confirmPassword("password-confirm"));
+
+document.querySelector("#btn").addEventListener("click", () => setAction()),
+	() => setAction();
 
 function defaultFunction() {
 	const dataLogin = localStorage.getItem("Data");
@@ -9,8 +21,8 @@ function defaultFunction() {
 	}
 }
 
-function checkCredential() {
-	const id = document.activeElement.id;
+function checkCredential(id) {
+	console.log(id);
 	if (id === "email") {
 		const pattern = /^([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
 		const val = document.getElementById("email").value;
@@ -87,19 +99,20 @@ function setAction() {
 	dataLogin.push(setData);
 
 	localStorage.setItem("Data", JSON.stringify(dataLogin));
-	window.location.href = "./index.html";
 }
 
 function confirmPassword() {
 	const pass = document.getElementById("password");
 	const passwordConfirm = document.getElementById("password-confirm");
 	const passConfirm = document.getElementById("pass-confirm");
-	if (pass.value != passwordConfirm.value) {
-		passConfirm.innerHTML = `<i class="fa-solid fa-xmark"></i> Password Not Match`;
-		passConfirm.className = "false";
-	} else {
-		passConfirm.innerHTML = `<i class="fa-solid fa-check"></i> Password Match`;
-		passConfirm.className = "true";
+	if (passwordConfirm.value != "") {
+		if (pass.value != passwordConfirm.value) {
+			passConfirm.innerHTML = `<i class="fa-solid fa-xmark"></i> Password Not Match`;
+			passConfirm.className = "false";
+		} else {
+			passConfirm.innerHTML = `<i class="fa-solid fa-check"></i> Password Match`;
+			passConfirm.className = "true";
+		}
 	}
 }
 

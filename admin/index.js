@@ -69,9 +69,9 @@ function displayData() {
 
 function editData(index) {
 	const data = JSON.parse(localStorage.getItem("Data Admin"));
-	const newName = prompt("Input Nama: ");
-	const newAge = prompt("Input Umur: ");
-	const newEmail = prompt("Input Email: ");
+	const newName = prompt("Input Nama: ", data[index].name);
+	const newAge = prompt("Input Umur: ", data[index].age);
+	const newEmail = prompt("Input Email: ", data[index].email);
 	data[index] = { name: newName, age: newAge, email: newEmail };
 	localStorage.setItem("Data Admin", JSON.stringify(data));
 	displayData();
