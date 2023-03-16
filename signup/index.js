@@ -1,3 +1,6 @@
+const emailInput = document.querySelector("#email");
+emailInput.addEventListener("input", checkCredential());
+
 function defaultFunction() {
 	const dataLogin = localStorage.getItem("Data");
 	const setData = [{ email: "admin@gmail.com", password: "Admin123" }];
@@ -6,7 +9,8 @@ function defaultFunction() {
 	}
 }
 
-function checkCredential(id) {
+function checkCredential() {
+	const id = document.activeElement.id;
 	if (id === "email") {
 		const pattern = /^([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
 		const val = document.getElementById("email").value;
