@@ -95,10 +95,16 @@ function setAction() {
 	const dataLogin = JSON.parse(localStorage.getItem("Data"));
 	const email = document.getElementById("email");
 	const password = document.getElementById("password");
-	const setData = { email: email.value, password: password.value };
-	dataLogin.push(setData);
+	const check = dataLogin.find((a) => a.email === email.value);
+	console.log(check);
+	if (check === undefined) {
+		const setData = { email: email.value, password: password.value };
+		dataLogin.push(setData);
 
-	localStorage.setItem("Data", JSON.stringify(dataLogin));
+		localStorage.setItem("Data", JSON.stringify(dataLogin));
+	} else {
+		alert("Email already registered");
+	}
 }
 
 function confirmPassword() {

@@ -28,6 +28,8 @@ function setAction() {
 	if (check) {
 		form.setAttribute("action", "../admin/");
 		sessionStorage.setItem("Name", email.value);
+	} else {
+		alert("Invalid Email or Password");
 	}
 }
 

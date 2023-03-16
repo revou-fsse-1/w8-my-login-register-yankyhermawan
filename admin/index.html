@@ -8,6 +8,10 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		/>
 	</head>
 	<body>
 		<header>
@@ -15,10 +19,26 @@
 			<h2>Make your Data</h2>
 		</header>
 		<div class="input-container grid-container">
-			<input type="text" name="name" placeholder="Nama" id="name" />
-			<input type="text" name="age" placeholder="Umur" id="age" />
-			<input type="text" name="email" placeholder="Email" id="email" />
-			<input type="submit" value="Tambah Data" onclick="addData()" />
+			<div>
+				<input type="text" name="name" placeholder="Nama" id="name" required />
+				<div id="name-text" class="notif"></div>
+			</div>
+			<div>
+				<input type="text" name="age" placeholder="Umur" id="age" required />
+				<div id="age-text" class="notif"></div>
+			</div>
+			<div>
+				<input
+					type="text"
+					name="email"
+					placeholder="Email"
+					id="email"
+					required
+				/>
+				<div id="email-text" class="notif"></div>
+			</div>
+
+			<input type="submit" id="btn" value="Tambah Data" disabled="true" />
 		</div>
 		<table id="data-table" border="1px solid black"></table>
 		<script src="index.js" async defer></script>
