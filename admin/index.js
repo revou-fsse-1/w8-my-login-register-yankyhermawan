@@ -27,7 +27,7 @@ function defaultData() {
 			email: "bob@example.com",
 		},
 	];
-	if (data === null) {
+	if (data === null || data.length === 0) {
 		localStorage.setItem("Data Admin", JSON.stringify(setData));
 	}
 }
