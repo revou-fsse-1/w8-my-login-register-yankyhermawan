@@ -2,6 +2,10 @@
 
 URL : loginregisteryomans.netlify.app
 
+## Intro
+
+All pages file is saved to folder based on route, there is no index.html on default folder. 404.html is used to redirect to default route. If there is no index.html on default folder, it will routing to 404.html.
+
 ## Pages 
 - Login Page
 - Register Page
