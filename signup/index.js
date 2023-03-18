@@ -83,7 +83,8 @@ function checkCredential(id) {
 
 	if (
 		document.querySelectorAll("#password-text .true").length == 3 &&
-		document.querySelectorAll("#email-text .true").length == 1
+		document.querySelectorAll("#email-text .true").length == 1 &&
+		document.querySelectorAll("#password-confirm .ture").length == 1
 	) {
 		document.getElementById("btn").removeAttribute("disabled", "true");
 	} else {
